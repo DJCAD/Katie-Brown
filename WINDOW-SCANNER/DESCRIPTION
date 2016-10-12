@@ -1,0 +1,10 @@
+Number of LED's linked to board would be the number of windows in your house, if they are all running in sequence your windows
+are all shut in the house.
+
+When an LED goes off and the sequence is broken, it means the window has been opened and you can check to see which windows are 
+open in your house to make sure they are shut again later on. The aim would be to remind you to close windows before leaving home
+or to help you control temperature of house and be more economic when heating rooms when a window is open.  
+
+
+(this would need to be linked to a tilt switch or other stimulus on the window. More an example of how a sequence of lights could 
+affect behaviours and improve function of windows.) 
