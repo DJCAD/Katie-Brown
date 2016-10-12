@@ -1,0 +1,35 @@
+/*
+ *
+ * Udemy.com
+ * Using Photoresistors (LDRs) with an Arduino
+ *
+ */
+ 
+ // pin assignments
+ int LED = 13;
+ int LDR = 0;
+ 
+ // variables
+ int base;
+ int threshold = 100;
+ 
+ // declare inputs and outputs
+ // and take a baseline reading
+ void setup() {
+   pinMode(LED, OUTPUT);
+   pinMode(LDR, INPUT);
+   base = analogRead(LDR);
+ }
+ 
+ // read from the analog input connected to the LDR
+ // and print the value to the serial port.
+ // the delay is only to avoid sending so much data
+ // as to make it unreadable.
+ void loop() {
+   int v = analogRead(LDR);
+   if ((base - v) > threshold) {
+     digitalWrite(LED, HIGH);
+   } else {
+     digitalWrite(LED, LOW);
+   }
+ }
