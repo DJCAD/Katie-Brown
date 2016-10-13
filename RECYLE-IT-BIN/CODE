@@ -1,0 +1,41 @@
+#define TILT_SWITCH_PIN A0
+#define BUZZER_PIN 10
+#define MAX 100
+int tiltValue = 0;
+int previousTiltValue = 0;
+int valueThreshold = 5;
+int timeThreshold = 2 ;
+int time = 0;
+
+void setup() 
+{
+   pinMode(BUZZER_PIN, OUTPUT);
+}
+
+void loop() 
+{
+  tiltValue = analogRead(TILT_SWITCH_PIN);
+  if(abs(tiltValue - previousTiltValue) >= valueThreshold)
+  {
+    time = time + 1;
+  }
+  else
+  {
+    reset();
+  }
+  if(time >= timeThreshold) 
+  {
+   analogWrite(BUZZER_PIN, MAX);
+   delay(500);
+   reset();
+  }
+  previousTiltValue = tiltValue;
+  delay(500);
+}
+
+void reset() 
+{
+ time = 0;
+ previousTiltValue = 0; 
+ analogWrite(BUZZER_PIN, 0);
+}
