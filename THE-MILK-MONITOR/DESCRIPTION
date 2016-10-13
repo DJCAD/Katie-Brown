@@ -1,0 +1,8 @@
+Potentiometer linked to milk bottle or located on front of fridge,
+so that everytime milk is taken the dial is turned the amount taken.
+
+Flatmates can view on their devices the amount left (potentiometer serial monitor figures)
+and know when they need to buy more. 
+
+Potentially, when a certain reading was reached this could be improved to actually 
+text flatmates in rotation, so they know they need more milk and that it's their turn to buy it.
